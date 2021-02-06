@@ -44,7 +44,9 @@ const Refresher = () => {
             );
           })}
         </div>
-        <button onClick={checkout}>checkout</button>
+        <button className="btn" id="checkout" onClick={checkout}>
+          checkout
+        </button>
       </div>
     </>
   );

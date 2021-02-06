@@ -9,7 +9,9 @@ body {
   color: white;
 }
 #root {
-  background: black;
+  background: wheat;
+  text-align: center;
+  height: 100vh;
 }
 button {
   border: none;
@@ -42,6 +44,7 @@ button {
   margin-bottom: 1em;
   padding: 1em;
   border-radius: 10px;
+  box-shadow: 0 0 5px;
 }
 .refreshers {
   display: grid;
@@ -72,4 +75,12 @@ button {
   width: fit-content;
   color: #000000;
   font-weight: 600;
+}
+#checkout {
+  width: fit-content;
+  color: #00ffff;
+  padding: 0.25em;
+  text-align: center;
+  margin: auto;
+  box-shadow: 0 0 5px black;
 }
