@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from "react";
 import RefresherCard from "./RefresherCard";
+import data from "../data/refreshers";
 const Refresher = () => {
   const [refreshers, setRefreshers] = useState({});
+  const [checkoutList, setCheckoutList] = useState({});
   const [refreshersTotalCount, setRefreshersTotalCount] = useState(0);
   useEffect(() => {
-    setRefreshers({
-      RefresherRegular: { cnt: 0, id: 1, name: "RefresherRegular" },
-      RefresherStrong: { cnt: 0, id: 2, name: "RefresherStrong" },
-      RefresherUltra: { cnt: 0, id: 3, name: "RefresherUltra" },
-      RefresherSpecial: { cnt: 0, id: 4, name: "RefresherSpecial" },
-    });
+    setRefreshers({ ...data });
   }, []);
-  // const handleClick = () => {
-  //   let count = 0;
-  //   for (const r in refreshers) {
-  //     count += refreshers[r].cnt;
-  //   }
-  //   setRefreshersTotalCount(count);
-  // };
+  const checkout = (e) => {
+    let checkoutListCopy = {};
+    for (const i in refreshers) {
+      if (refreshers[i].cnt !== 0) {
+        checkoutListCopy = { ...checkoutListCopy, [i]: refreshers[i] };
+      }
+    }
+    setCheckoutList(checkoutListCopy);
+  };
+  useEffect(() => {
+    console.log(checkoutList);
+  }, [checkoutList]);
   return (
     <>
       <h1>Refresher</h1>
@@ -42,6 +44,7 @@ const Refresher = () => {
             );
           })}
         </div>
+        <button onClick={checkout}>checkout</button>
       </div>
     </>
   );
