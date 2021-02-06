@@ -23,10 +23,10 @@ const Refresher = () => {
       <h1>Refresher</h1>
       <div>
         <p>Welcome to Refresher </p>
-        <div>
+        <div id="total-count">
           <span className="count">Total Count : {refreshersTotalCount}</span>
         </div>
-        <div>
+        <div className="refreshers">
           {Object.keys(refreshers).map((r) => {
             return (
               <RefresherCard
