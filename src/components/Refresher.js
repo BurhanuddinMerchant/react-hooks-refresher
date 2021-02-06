@@ -22,11 +22,11 @@ const Refresher = () => {
   }, [checkoutList]);
   return (
     <>
-      <h1>Refresher</h1>
-      <div>
-        <p>Welcome to Refresher </p>
+      <div className="container">
+        <h1>Refresher</h1>
+
         <div id="total-count">
-          <span className="count">Total Count : {refreshersTotalCount}</span>
+          <div className="count">Total Count : {refreshersTotalCount}</div>
         </div>
         <div className="refreshers">
           {Object.keys(refreshers).map((r) => {
