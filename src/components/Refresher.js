@@ -7,6 +7,7 @@ const Refresher = () => {
   const [refreshersTotalCount, setRefreshersTotalCount] = useState(0);
   useEffect(() => {
     setRefreshers({ ...data });
+    document.getElementById("checkout-container").style.display = "none";
   }, []);
   const checkout = (e) => {
     let checkoutListCopy = {};
@@ -18,7 +19,9 @@ const Refresher = () => {
     setCheckoutList(checkoutListCopy);
   };
   useEffect(() => {
-    console.log(checkoutList);
+    document.getElementById("checkout-container").style.display = "flex";
+    document.getElementById("checkout-container").style.flexDirection =
+      "column";
   }, [checkoutList]);
   return (
     <>
@@ -45,8 +48,19 @@ const Refresher = () => {
           })}
         </div>
         <button className="btn" id="checkout" onClick={checkout}>
-          checkout
+          Checkout
         </button>
+      </div>
+      <div id="checkout-container">
+        <h2>Checkout Cart</h2>
+        {Object.keys(checkoutList).map((m) => {
+          console.log(checkoutList[m]);
+          return (
+            <div className="checkout-item" key={checkoutList[m].id}>
+              {checkoutList[m].name} : {checkoutList[m].cnt}
+            </div>
+          );
+        })}
       </div>
     </>
   );

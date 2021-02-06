@@ -5,14 +5,18 @@
 }
 
 body {
-  background: burlywood;
+  background-color: #cbf3f9;
   color: white;
 }
+
 #root {
-  background: wheat;
+  background-color: #cbf3f9;
+  /* background: linear-gradient(90deg, pink, white); */
   text-align: center;
-  height: 100vh;
+  height: 100%;
+  font-family: sans-serif;
 }
+
 button {
   border: none;
   cursor: pointer;
@@ -39,7 +43,7 @@ button {
 }
 .refresher-card {
   background: white;
-  /* width: fit-content; */
+  width: 100%;
   color: black;
   margin-bottom: 1em;
   padding: 1em;
@@ -85,14 +89,16 @@ button {
   align-self: flex-end;
   border-radius: 10px;
   border: tomato 2px solid;
+  margin-top: 1em;
 }
 #checkout {
   width: fit-content;
   color: #00ffff;
-  padding: 0.25em;
+  padding: 0.5em;
   text-align: center;
   margin: auto;
   box-shadow: 0 0 5px black;
+  font-size: 1.125rem;
 }
 .container {
   display: flex;
@@ -100,4 +106,29 @@ button {
 }
 h1 {
   color: #ff0000;
+}
+.checkout-item {
+  background: #000000;
+  color: #00ffff;
+  font-weight: 500;
+  /* width: fit-content; */
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 5px;
+  width: 100%;
+  margin-bottom: 1em;
+  align-self: center;
+}
+#checkout-container {
+  background: #ffffff;
+  padding: 1em;
+  width: fit-content;
+  margin: auto;
+  margin-top: 1em;
+  color: #000000;
+  box-shadow: 0 0 5px;
+  margin-bottom: 1em;
+}
+#checkout-container h2 {
+  margin-bottom: 1em;
 }
