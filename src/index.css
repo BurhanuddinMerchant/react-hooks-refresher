@@ -28,6 +28,15 @@ button {
   font-weight: 600;
   margin-right: 1em;
 }
+#root h1 {
+  background: #ffffff;
+  width: fit-content;
+  margin: 0.5em auto;
+  padding: 0.25em;
+  border-radius: 20px;
+  border: 0 0 2px;
+  box-shadow: 0 0 5px #000000;
+}
 .btn:hover {
   box-shadow: 0 0 5px;
   text-shadow: 0 0 2px;
