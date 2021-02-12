@@ -5,12 +5,14 @@
 }
 
 body {
-  background-color: #cbf3f9;
+  /* background-color: #cbf3f9; */
+  background-color: #141414;
   color: white;
 }
 
 #root {
   background-color: #cbf3f9;
+  background-color: #141414;
   /* background: linear-gradient(90deg, pink, white); */
   text-align: center;
   height: 100%;
@@ -27,6 +29,8 @@ button {
   font-size: 1rem;
   font-weight: 600;
   margin-right: 1em;
+  padding: 0.25em;
+  border-radius: 5px;
 }
 #root h1 {
   background: #ffffff;
@@ -57,13 +61,12 @@ button {
   margin-bottom: 1em;
   padding: 1em;
   border-radius: 10px;
-  box-shadow: 0 0 5px;
+  box-shadow: white 0 0 5px;
   border: white 2px solid;
 }
-.refresher-card:hover,
-#total-count:hover {
-  border: black 2px solid;
-  box-shadow: 0 0 10px;
+.refresher-card:hover {
+  border: white 2px solid;
+  box-shadow: white 0 0 10px;
 }
 .refreshers {
   display: grid;
@@ -92,22 +95,27 @@ button {
   margin-right: 1em;
   padding: 1em;
   width: fit-content;
-  color: #000000;
+  color: #ffffff;
   font-weight: 600;
-  box-shadow: 0 0 5px;
+  box-shadow: tomato 0 0 10px;
   align-self: flex-end;
   border-radius: 10px;
   border: tomato 2px solid;
   margin-top: 1em;
 }
 #checkout {
+  color: #000000;
   width: fit-content;
-  color: #00ffff;
   padding: 0.5em;
   text-align: center;
   margin: auto;
-  box-shadow: 0 0 5px black;
+  box-shadow: #00ffff 0 0 5px;
   font-size: 1.125rem;
+  background-color: #00ffff;
+}
+#checkout:hover {
+  color: #ffffff;
+  box-shadow: #00ffff 0 0 10px;
 }
 .container {
   display: flex;
@@ -121,12 +129,30 @@ h1 {
   color: #00ffff;
   font-weight: 500;
   /* width: fit-content; */
-  padding: 1em;
+  padding: 1em 0;
   border-radius: 5px;
   box-shadow: 0 0 5px;
   width: 100%;
   margin-bottom: 1em;
   align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-item span {
+  margin: auto;
+  margin-left: 1em;
+}
+.remove {
+  margin: auto 0.5em;
+  align-self: flex-end;
+  background-color: #ff0000;
+  color: #ffffff;
+  box-shadow: #ff0000 0 0 5px;
+  border-radius: 2px;
+  padding: 0.25em;
+}
+.remove:hover {
+  box-shadow: #ff0000 0 0 10px;
 }
 #checkout-container {
   background: #ffffff;

@@ -18,6 +18,22 @@ const Refresher = () => {
     }
     setCheckoutList(checkoutListCopy);
   };
+  const handleRemove = (e) => {
+    const id = e.target.parentElement.attributes["id"].value;
+    let newCheckout = {};
+    console.log(refreshers);
+    console.log(checkoutList);
+    for (const i in checkoutList) {
+      if (checkoutList[i].id === parseInt(id)) {
+        setRefreshersTotalCount(refreshersTotalCount - checkoutList[i].cnt);
+        refreshers[i].cnt = 0;
+      } else {
+        newCheckout = { ...newCheckout, [i]: checkoutList[i] };
+      }
+    }
+    setRefreshers(refreshers);
+    setCheckoutList(newCheckout);
+  };
   useEffect(() => {
     document.getElementById("checkout-container").style.display = "flex";
     document.getElementById("checkout-container").style.flexDirection =
@@ -54,10 +70,19 @@ const Refresher = () => {
       <div id="checkout-container">
         <h2>Checkout Cart</h2>
         {Object.keys(checkoutList).map((m) => {
-          console.log(checkoutList[m]);
+          // console.log(checkoutList[m]);
           return (
-            <div className="checkout-item" key={checkoutList[m].id}>
-              {checkoutList[m].name} : {checkoutList[m].cnt}
+            <div
+              className="checkout-item"
+              key={checkoutList[m].id}
+              id={checkoutList[m].id}
+            >
+              <span>
+                {checkoutList[m].name} : {checkoutList[m].cnt}
+              </span>
+              <button className="remove" onClick={handleRemove}>
+                x
+              </button>
             </div>
           );
         })}
