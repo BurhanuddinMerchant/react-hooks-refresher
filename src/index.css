@@ -39,7 +39,8 @@ button {
   padding: 0.25em;
   border-radius: 20px;
   border: 0 0 2px;
-  box-shadow: 0 0 5px #000000;
+  box-shadow: 0 0 5px white;
+  cursor: default;
 }
 .btn:hover {
   box-shadow: 0 0 5px;
@@ -161,7 +162,7 @@ h1 {
   margin: auto;
   margin-top: 1em;
   color: #000000;
-  box-shadow: 0 0 5px;
+  box-shadow: #00ffff 0 0 5px;
   margin-bottom: 1em;
 }
 #checkout-container h2 {
