@@ -8,6 +8,16 @@ const Card = ({ refresher }) => {
   const handleDec = (e) => {
     if (refresher.refreshers[refresher.name].cnt === 0) {
       return;
+    } else if (refresher.refreshers[refresher.name].cnt === 1) {
+      let newCheckout = {};
+      for (const i in refresher.checkoutList) {
+        if (i === refresher.name) {
+          continue;
+        } else {
+          newCheckout = { ...newCheckout, [i]: refresher.checkoutList[i] };
+        }
+      }
+      refresher.setCheckoutList(newCheckout);
     }
     refresher.refreshers[refresher.name].cnt -= 1;
     refresher.setRefreshersTotalCount(refresher.refreshersTotalCount - 1);

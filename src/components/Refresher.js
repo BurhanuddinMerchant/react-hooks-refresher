@@ -21,8 +21,6 @@ const Refresher = () => {
   const handleRemove = (e) => {
     const id = e.target.parentElement.attributes["id"].value;
     let newCheckout = {};
-    console.log(refreshers);
-    console.log(checkoutList);
     for (const i in checkoutList) {
       if (checkoutList[i].id === parseInt(id)) {
         setRefreshersTotalCount(refreshersTotalCount - checkoutList[i].cnt);
@@ -57,6 +55,8 @@ const Refresher = () => {
                   refreshers,
                   setRefreshersTotalCount,
                   refreshersTotalCount,
+                  setCheckoutList,
+                  checkoutList,
                 }}
                 key={r}
               />
