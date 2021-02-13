@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RefresherCard from "./RefresherCard";
 import data from "../data/refreshers";
+import CheckoutItem from "./CheckoutItem";
 const Refresher = () => {
   const [refreshers, setRefreshers] = useState({});
   const [checkoutList, setCheckoutList] = useState({});
@@ -72,28 +73,16 @@ const Refresher = () => {
         {Object.keys(checkoutList).map((m) => {
           // console.log(checkoutList[m]);
           return (
-            <div
-              className="checkout-item"
+            <CheckoutItem
               key={checkoutList[m].id}
-              id={checkoutList[m].id}
-            >
-              <span>
-                <img
-                  src="https://packreate.com/wp-content/uploads/2018/03/Aluminium_Can_Metallic_Matte_Front_Mockup_01.jpg"
-                  alt="refresher-checkout"
-                ></img>
-              </span>
-              <span>
-                {checkoutList[m].name} : {checkoutList[m].cnt}
-              </span>
-              <button className="remove" onClick={handleRemove}>
-                x
-              </button>
-            </div>
+              checkoutListItem={checkoutList[m]}
+              handleRemove={handleRemove}
+            />
           );
         })}
       </div>
     </>
   );
 };
+
 export default Refresher;
