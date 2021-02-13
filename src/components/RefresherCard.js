@@ -25,10 +25,7 @@ const Card = ({ refresher }) => {
   };
   return (
     <div className="refresher-card">
-      <img
-        src="https://packreate.com/wp-content/uploads/2018/03/Aluminium_Can_Metallic_Matte_Front_Mockup_01.jpg"
-        alt="refresher-mockup"
-      />
+      <img src={refresher.image} alt="refresher-mockup" />
       <h2>{refresher.name}</h2>
       <button
         className="btn"

@@ -129,8 +129,7 @@ h1 {
   background: #000000;
   color: #00ffff;
   font-weight: 500;
-  /* width: fit-content; */
-  padding: 1em 0;
+  padding: 0.5em 0;
   border-radius: 5px;
   box-shadow: 0 0 5px;
   width: 100%;
@@ -142,6 +141,9 @@ h1 {
 .checkout-item span {
   margin: auto;
   margin-left: 1em;
+}
+.checkout-item span > img {
+  width: 50px;
 }
 .remove {
   margin: auto 0.5em;

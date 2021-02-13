@@ -78,6 +78,12 @@ const Refresher = () => {
               id={checkoutList[m].id}
             >
               <span>
+                <img
+                  src="https://packreate.com/wp-content/uploads/2018/03/Aluminium_Can_Metallic_Matte_Front_Mockup_01.jpg"
+                  alt="refresher-checkout"
+                ></img>
+              </span>
+              <span>
                 {checkoutList[m].name} : {checkoutList[m].cnt}
               </span>
               <button className="remove" onClick={handleRemove}>
