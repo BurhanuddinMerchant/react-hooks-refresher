@@ -168,3 +168,6 @@ h1 {
 #checkout-container h2 {
   margin-bottom: 1em;
 }
+.refresher-card img {
+  width: 100%;
+}
