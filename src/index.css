@@ -94,7 +94,7 @@ button {
 #total-count {
   background: tomato;
   margin-right: 1em;
-  padding: 1em;
+  padding: 0.5em;
   width: fit-content;
   color: #ffffff;
   font-weight: 600;
